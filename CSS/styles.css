@@ -13,8 +13,24 @@
     background-size: cover;
     margin-left: 0;
     margin-right: 0;
+    box-sizing: border-box;
 
+}
 
+.fondoJugador {
+    width: 200vh;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-items: center;
+    background: url(/img/fondo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .row {
@@ -38,6 +54,80 @@
 
 }
 
+.row2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: 0;
+    margin-right: 0;
+    align-content: center;
+    align-items: stretch;
+    flex-direction: column;
+
+}
+
+#gameMasterMind{
+    display: flex;
+    flex-direction:column-reverse;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-left: 0;
+    margin-right: 0;
+   
+
+}
+
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+
+}
+
+.player {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+#player1 {
+    display: flex;
+    margin-right: 10%;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#player2 {
+    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+
+.playGame {
+    text-shadow: 0 0 30px #fff;
+    background-color: #214e6c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    justify-content:space-between;
+}
+
+
+#jugarBtn {
+   display: flex;
+   justify-content: center;
+ 
+
+}
 
 
 .colum1 {
@@ -77,23 +167,40 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-
+    font-size: 20px;
+    border-style:ridge;
 
 }
 
-.btn1:hover {
+.btnJugar{
+    background-color: #214e6c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 20px;
+    border-radius: 20%;
+    border-style:ridge;
+    
+}
+
+.btnJugar:hover{
     background-color: lightsalmon;
     color: crimson;
 }
 
-.btn2:hover {
+
+
+.btn:hover {
     background-color: lightsalmon;
     color: crimson;
 }
+
 
 .colum4 {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
     align-items: baseline;
 
 }
