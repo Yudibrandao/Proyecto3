@@ -1,49 +1,133 @@
 .body {
     margin: 0;
     padding: 0;
+    width: 100vh;
+    height: 100vh;
 }
 
 .fondo {
     display: flex;
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    background: url(/img/fondo.png);
-    background-repeat: no-repeat;
+    height: 100vh;
+    background: url(/img/fondo23.png);
     background-size: cover;
-    margin-left: 0;
     margin-right: 0;
+    margin-left: 0;
     box-sizing: border-box;
+    object-fit: cover;
+    overflow: hidden;
+    justify-content: center;
+    align-content: space-around;
 
 }
 
 .fondoJugador {
-    width: 200vh;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     justify-items: center;
-    background: url(/img/fondo.png);
+    background: url(/img/fondo23.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 0;
     margin-right: 0;
     box-sizing: border-box;
     overflow: hidden;
+    object-fit: cover;
 }
 
-.row {
+
+.fondoJuego {
+    /* height: 100vh;
+    margin: 0; */
     display: flex;
-    flex-wrap: nowrap;
+    background: url(/img/fondojuego.png);
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    background-size: cover;
+    align-content: space-around;
+    justify-content: space-around; */
+    flex-direction: column;
+    justify-content: center;
+ 
+}
+
+.tituloJuego{
+    display:flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.casillasVarias {
+    display: flex;
+} 
+
+#mastermindForm{
+    display: flex;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column (4);
+    flex-wrap: wrap;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform:rotate(180deg);
+
+    /* align-content: space-around; */
+    /* justify-content:stretch; */
+    /* flex-direction:column; */
+}
+
+
+.jugadorGuardado{
+    display: flex;
+    height: 10vh;
+
+
+}
+
+.row4 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around; 
+    color: white;
+
+} 
+
+
+
+
+.oportunidad {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 200px;
+}
+
+.casilla {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    border: 1px solid #888;
+
+}
+
+.confColum {
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
-    margin-left: 0;
-    margin-right: 0;
-
+    flex-direction: row;
+    align-items: center;
 }
 
-.row1 {
+
+.confColum2 {
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -53,6 +137,18 @@
     margin-top: 1vh;
 
 }
+
+.confColum3 {
+    display: flex;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 1vh;
+    align-content: center;
+    justify-content: center;
+    align-content: space-around;
+    justify-content: center;
+}
+
 
 .row2 {
     display: flex;
@@ -64,18 +160,26 @@
     align-content: center;
     align-items: stretch;
     flex-direction: column;
-
 }
 
-#gameMasterMind{
-    display: flex;
-    flex-direction:column-reverse;
-    width: 100%;
-    justify-content: space-evenly;
-    margin-left: 0;
-    margin-right: 0;
-   
+.row4 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around; 
+    color: white;
+    margin-top: 10vh;
 
+} 
+
+#gameMasterMind {
+    display: flex;
+    height: 100vh;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+       
 }
 
 
@@ -118,17 +222,34 @@
     border: none;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 
 #jugarBtn {
-   display: flex;
-   justify-content: center;
- 
+    display: flex;
+    justify-content: center;
+
 
 }
 
+
+.colum0 {
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10vh;
+    font-size: x-large;
+    margin-top: 10vh;
+
+}
+
+
+.separacionColore {
+    display: flex;
+    margin-bottom: 20vh;
+
+
+}
 
 .colum1 {
     display: flex;
@@ -139,13 +260,14 @@
     width: 20vh;
 }
 
+
 .colum2 {
     display: flex;
     align-items: center;
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15vh;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     height: 100vh;
     width: 60vh;
 }
@@ -168,11 +290,12 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
     font-size: 20px;
-    border-style:ridge;
+    border-style: ridge;
+    border-radius: 20%;
 
 }
 
-.btnJugar{
+.btnJugar {
     background-color: #214e6c;
     color: #fff;
     padding: 10px 20px;
@@ -181,15 +304,14 @@
     transition: background-color 0.3s, color 0.3s;
     font-size: 20px;
     border-radius: 20%;
-    border-style:ridge;
-    
+    border-style: ridge;
+
 }
 
-.btnJugar:hover{
+.btnJugar:hover {
     background-color: lightsalmon;
     color: crimson;
 }
-
 
 
 .btn:hover {
@@ -210,7 +332,13 @@
     flex-direction: column;
     font-family: Georgia, 'Times New Roman', Times, serif;
     align-items: baseline;
+    color: white;
     height: 100vh;
     width: 80vh;
 
 }
+
+
+
+
+

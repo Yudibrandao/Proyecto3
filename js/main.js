@@ -1,5 +1,6 @@
 const colorPicker = document.getElementById('colorPicker');
 const selectedColor = document.getElementById('selectedColor');
+const playGame = docume
 
 
 colorPicker.addEventListener('input', function () {
@@ -15,11 +16,9 @@ const setPlayerName=(playerNumber)=> {
 }
 
 const playGame=()=> {
-    // Lógica del juego (piedra, papel, tijeras) puede ir aquí
-    const player1Name = document.getElementById("player1DisplayName").textContent;
-    const player2Name = document.getElementById("player2DisplayName").textContent;
-
-    // Muestra el resultado del juego
+    
+    const playerName = document.getElementById("playerDisplayName").textContent;
+ 
     const result = document.getElementById("result");
     result.textContent = "Resultado del juego aquí";
 }
