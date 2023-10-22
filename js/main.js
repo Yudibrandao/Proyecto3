@@ -1,24 +1,32 @@
-const colorPicker = document.getElementById('colorPicker');
-const selectedColor = document.getElementById('selectedColor');
-const playGame = docume
+const playerNameInput = document.getElementById("nombre");
+
+const nombreForm = document.getElementById("nombreForm");
+
+function setPlayerNameAndPlay() {
+    const playerName = document.getElementById("nombre").value;
+    sessionStorage.setItem("playerName", playerName);
+   
+    if (typeof playerName === "string" && playerName.length <= 7) {
+        const jugarButton = document.getElementById("jugarButton");
+        jugarButton.removeAttribute("disabled");
 
 
-colorPicker.addEventListener('input', function () {
-    const color = colorPicker.value;
-    selectedColor.textContent = color;
-    selectedColor.style.backgroundColor = color;
+    } else {
+        alert("El nombre no es válido");
+
+        playerNameInput.value = "";
+
+    }
+
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const playerName = sessionStorage.getItem("playerName");
+    const saludo = document.getElementById("saludo");
+
+    if (playerName) {
+        saludo.textContent = "BIENVENIDO, DISFRUTA DEL JUEGO" + " " + playerName + "!";
+    }
 });
 
-const setPlayerName=(playerNumber)=> {
-    const nameInput = document.getElementById(`player${playerNumber}Name`);
-    const displayName = document.getElementById(`player${playerNumber}DisplayName`);
-    displayName.textContent = nameInput.value;
-}
 
-const playGame=()=> {
-    
-    const playerName = document.getElementById("playerDisplayName").textContent;
- 
-    const result = document.getElementById("result");
-    result.textContent = "Resultado del juego aquí";
-}

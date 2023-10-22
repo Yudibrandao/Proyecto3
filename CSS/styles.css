@@ -89,11 +89,6 @@
 
 }
 
-.divisionEntre{
- align-items: first baseline;
- justify-content: center
-}
-
 .row4 {
     flex-direction: row;
     flex-wrap: wrap;
@@ -342,8 +337,5 @@
     width: 80vh;
 
 }
-
-
-
 
 
