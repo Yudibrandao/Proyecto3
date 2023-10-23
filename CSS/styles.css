@@ -53,6 +53,18 @@
  
 }
 
+.row{
+    justify-content: space-evenly
+}
+
+
+.juego{
+    display:flex;
+    grid-template-columns: 1fr;
+    justify-content:space-around;
+
+}
+
 .tituloJuego{
     display:flex;
     flex-direction: column;
@@ -60,25 +72,17 @@
 }
 
 .casillasVarias {
-    display: flex;
+   /* height: 5em;
+   width: 5em;
+   background-color: blue; */
 } 
 
 #mastermindForm{
     display: flex;
     height: 100vh;
-    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column (4);
     flex-wrap: wrap;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform:rotate(180deg);
 
-    /* align-content: space-around; */
-    /* justify-content:stretch; */
-    /* flex-direction:column; */
 }
 
 
@@ -89,18 +93,6 @@
 
 }
 
-.row4 {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    align-content: space-around;
-    justify-content: space-around; 
-    color: white;
-
-} 
-
-
-
 
 .oportunidad {
     display: flex;
@@ -110,31 +102,18 @@
 }
 
 .casilla {
-    width: 30px;
-    height: 30px;
+    margin-top: 10%;
+    width: 7vh;
+    height: 7vh;
     background-color: #ccc;
     border: 1px solid #888;
+    border-radius: 50%;
 
 }
 
 .confColum {
     display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center;
-}
-
-
-.confColum2 {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: center;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 1vh;
+   justify-content:space-around;
 
 }
 
@@ -163,13 +142,14 @@
 }
 
 .row4 {
+    height: 80vh;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     align-content: space-around;
     justify-content: space-around; 
     color: white;
-    margin-top: 10vh;
+    
 
 } 
 
@@ -295,6 +275,26 @@
 
 }
 
+.confColum{
+    align-items: center;
+}
+
+.btn1{
+    border-radius: 50%;
+}
+
+.btn2{
+    border-radius: 50%;
+}
+
+.btn3{
+    border-radius: 50%;
+}
+
+.btn4{
+    border-radius: 50%;
+}
+
 .btnJugar {
     background-color: #214e6c;
     color: #fff;
@@ -336,6 +336,39 @@
     height: 100vh;
     width: 80vh;
 
+}
+
+.cuadrado1{
+    height: 10vh;
+    width: 10vh;
+    background-color: transparent;
+    border-radius: 20%;
+   border-style: dotted;
+   
+}
+.cuadrado2{
+    height: 10vh;
+    width: 10vh;
+    background-color: transparent;
+    border-radius: 20%;
+   border-style: dotted;
+}
+
+.cuadrado3{
+  
+    height: 10vh;
+    width: 10vh;
+    background-color: transparent;
+    border-radius: 20%;
+   border-style: dotted;
+}
+
+.cuadrado4{
+    height: 10vh;
+    width: 10vh;
+    background-color: transparent;
+    border-radius: 20%;
+   border-style: dotted;
 }
 
 

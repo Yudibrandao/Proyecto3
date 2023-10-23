@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/styles.css">
@@ -16,117 +16,102 @@
             <h1 class="text-white text-center">MASTERMIND</h1>
         </div>
 
-        <div class="row4  align-items-end" href="">
+        <div class="juego">
 
-            <div class="jugadorGuardado" id="saludo"> </div>
+            <div class="row4  align-items-end" href="">
 
-            <div class="colores-guardados" id="coloresGuardados">
-                <div class="col-3">
-                    <label for="colorPicker1">Elige un color:</label>
-                    <input type="color" id="colorPicker" nombre="colorPicker">
-                    <p>Color seleccionado: <span id="selectedColor"></span></p>
+                <div class="jugadorGuardado" id="saludo"> </div>
+
+                <div class="colores-guardados" id="coloresGuardados">
+                    <div class="col-3">
+                        <p>Color seleccionado: <span id="selectedColorJuego1"></span></p>
+                        <div class="cuadrado1" id="cuadrado1" onclick=" getColorPicker()"> </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Color seleccionado: <span id="selectedColorJuego2"></span></p>
+                        <div class="cuadrado2" id="cuadrado2"  onclick=" getColorPicker()"> </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Color seleccionado: <span id="selectedColorJuego3"></span></p>
+                        <div class="cuadrado3" id="cuadrado3" onclick=" getColorPicker()"> </div>
+                    </div>
+                    <div class="col-3">
+                        <p>Color seleccionado: <span id="selectedColorJuego4"></span></p>
+                        <div class="cuadrado4" id="cuadrado4" onclick=" getColorPicker()"> </div>
+                    </div>
                 </div>
-                <div class="col-3">
-                    <label for="colorPicker2">Elige un color:</label>
-                    <input type="color" id="colorPicker" nombre="colorPicker">
-                    <p>Color seleccionado: <span id="selectedColor"></span></p>
-                </div>
-                <div class="col-3">
-                    <label for="colorPicker3">Elige un color:</label>
-                    <input type="color" id="colorPicker" nombre="colorPicker">
-                    <p>Color seleccionado: <span id="selectedColor"></span></p>
-                </div>
-                <div class="col-3">
-                    <label for="colorPicker4">Elige un color:</label>
-                    <input type="color" id="colorPicker" nombre="colorPicker">
-                    <p>Color seleccionado: <span id="selectedColor"></span></p>
-                </div>
+
             </div>
+
+            <div class="casillasVarias" id="casillasVacias">
+
+                <form id="mastermindForm">
+                    <div class="oportunidad1">
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                    </div>
+                    <div class="oportunidad2">
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                    </div>
+                    <div class="oportunidad3">
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                    </div>
+                   
+                    <div class="oportunidad5">
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                        <div class="casilla"></div>
+                    </div>
+                   
+                    
+                </form>
+            </div>
+
             
-        </div>
-
-        <div class="casillasVarias" id="casillasVacias">
-
-            <form id="mastermindForm">
-                <div class="oportunidad1">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad2">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad3">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad4">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad5">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad6">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad7">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad8">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad9">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-                <div class="oportunidad10">
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                    <div class="casilla"></div>
-                </div>
-            </form>
         </div>
 
     </div>
 
 
 
-
-
-
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
-    <script src="/js/main.js"> </script>
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+        </script>
+
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
